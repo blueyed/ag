@@ -141,7 +141,7 @@ function! s:Ag(args, relative) " {{{
     " https://github.com/ggreer/the_silver_searcher/issues/57
     cexpr system(cmd)
     if exists('*setqftitle')
-      call setqftitle('ag' . args)
+      call setqftitle('ag ' . string(args))
     endif
     " open up the fold on the first result
     if len(getqflist())
